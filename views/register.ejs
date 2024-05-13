@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%- include ('./partials/head') %>
+
+    <body>
+
+        <div class="min-h-screen flex justify-center items-center px-2 bg-blue-700">
+
+            <div class="rounded max-w-[500px] w-full shadow-md p-3 border-[3px] border-[#ffffffa3] bg-white">
+
+                <form method="POST" action="/register"  enctype="multipart/form-data" class="formulaire pl-2 pr-5 py-2">
+
+                    <h3 class="text-center font-medium text-2xl my-2 mb-8 text-black">CRÉER UN COMPTE</h3>
+
+                    <div class="max-w-[400px] w-full mx-auto relative mb-3">
+                        <input type="text" id="username" name="username" placeholder="Nom utilisateur"
+                            class="ring-2 rounded-sm mx-2 py-2 px-8 w-full outline-none"
+                            required
+                        />
+                        <i class="fa-solid fa-user absolute top-[10px] left-4 text-blue-500" style="font-size:20px;"></i>
+                    </div>
+
+                    <div class="max-w-[400px] w-full mx-auto relative mb-3">
+                        <input type="email" id="email" name="email" placeholder="name@example.com"
+                            class="ring-2 rounded-sm mx-2 py-2 px-8 w-full outline-none"
+                            required
+                        />
+                        <i class="fa-solid fa-user absolute top-[10px] left-4 text-blue-500" style="font-size:20px;"></i>
+                    </div>
+
+                    <div class="max-w-[400px] w-full mx-auto mb-3 mt-2 relative">
+                        <input type="password" id="password" name="password" placeholder="Mot de passe"
+                            class="password ring-2  rounded-sm mx-2 py-2 px-2 w-full outline-none ps-8 pr-9"
+                            required
+                        />
+                        <i class="fa-solid fa-lock absolute top-[10px] left-4 text-blue-500 cursor-pointer" style="font-size:20px;"></i>
+                    </div>
+
+                    <!-- <div class="max-w-[400px] w-full mx-auto mb-3 mt-2 relative">
+                        <input type="password" placeholder="Confirmation du mot de passe"
+                            class="password ring-2  rounded-sm mx-2 py-2 px-2 w-full outline-none ps-8 pr-9"
+                            required
+                        />
+                        <i class="fa-solid fa-lock absolute top-[10px] left-4 text-blue-500 cursor-pointer" style="font-size:20px;"></i>
+                    </div> -->
+
+                    <div class="max-w-[398px] w-full mx-auto bg-blue-400 ml-[30px] hover:bg-blue-500">
+                        <input type="file" id="avatar" name="avatar" accept="image/*" type="file" class="ring-2 rounded-sm py-1 w-full outline-none pl-3 cursor-pointer pr-5"
+                            required
+                        />
+                    </div>
+
+                    <div class="max-w-[400px] w-full mx-auto mt-4 mb-1">
+                        <button type="submit" class="my-2 font-medium bg-green-500 active:bg-green-700 hover:bg-green-600 px-8 w-full py-[9px] rounded-md text-white ml-3 outline-none">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="max-w-[400px] w-full mx-auto">
+                        <button type="button" onclick="window.location.href = '/login'" class="font-medium bg-blue-500 active:bg-blue-700 hover:bg-blue-600 px-8 w-full py-[9px] rounded-md text-white ml-3 outline-none">
+                            Vous avez déjà un compte
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- <script>
+            const usernameInput = document.querySelector('#username');
+            const errorContainer = document.querySelector('.error-container');
+
+            usernameInput.addEventListener('keyup', () => {
+            const username = usernameInput.value.trim(); //La méthode trim() est utilisée pour supprimer les espaces vides au début et à la fin de la valeur saisie
+            if (username.length < 3 || username.length > 20) {
+                errorContainer.textContent = 'Le nom d\'utilisateur doit comporter entre 3 et 20 caractères';
+                usernameInput.style.color = "red";
+                //usernameInput.classList.add('error');
+            } else {
+                errorContainer.textContent = '';
+                usernameInput.style.color = "green";
+                //usernameInput.classList.remove('error');
+            }
+            });
+        </script> -->
+
+    </body>
+
+</html>
